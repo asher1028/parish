@@ -98,7 +98,7 @@
         <!-- Welcome Section -->
         <div class="row align-items-center text-center my-5 welcome-section bg-white">
             <div class="col-md-6 mb-3 mb-md-0 position-relative">
-                <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="../Images/6.jpg" class="d-block w-100" alt="Church Image 1">
