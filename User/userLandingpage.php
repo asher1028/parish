@@ -50,7 +50,7 @@
             object-fit: cover;
         }
 
-        /* Custom styling for sections */
+        /* Custom styling for sections xxx*/
         .welcome-section, .mass-schedule-section, .sacraments-section, .video-section, .services-offered-section, .contact-section, .social-section {
         padding: 25px;
         border-radius: 8px;
