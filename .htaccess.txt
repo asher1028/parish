@@ -1,11 +1,16 @@
 # Enable rewrite engine
 RewriteEngine On
 
+require all granted
+Order allow,deny
+Allow from all
+
+# Redirect root URL to User/userLandingpage.php
+# RewriteRule ^$ User/userLandingpage.php [L]
+
 # Set the default landing page to userLandingpage.php
 DirectoryIndex userLandingpage.php index.php index.html
 
-# Redirect root URL to User/userLandingpage.php
-RewriteRule ^$ User/userLandingpage.php [L]
 
 # Prevent directory listing
 Options -Indexes
