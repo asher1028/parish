@@ -1,4 +1,6 @@
-<?php include 'userSessionStart.php'; ?>
+<?php include 'userSessionStart.php'; 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,13 +101,22 @@
                 <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../Images/home.png" class="d-block w-100" alt="Church Image 1">
+                            <img src="../Images/6.jpg" class="d-block w-100" alt="Church Image 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="../Images/image2.jpg" class="d-block w-100" alt="Church Image 2">
+                            <img src="../Images/5.jpg" class="d-block w-100" alt="Church Image 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="../Images/angTinig.png" class="d-block w-100" alt="Church Image 3">
+                            <img src="../Images/4.png" class="d-block w-100" alt="Church Image 3">
+                        </div>
+						<div class="carousel-item active">
+                            <img src="../Images/3.jpg" class="d-block w-100" alt="Church Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/2.jpg" class="d-block w-100" alt="Church Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/1.jpg" class="d-block w-100" alt="Church Image 6">
                         </div>
                     </div>
 
