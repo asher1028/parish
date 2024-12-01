@@ -1,0 +1,22 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Set the default landing page to userLandingpage.php
+DirectoryIndex userLandingpage.php index.php index.html
+
+# Redirect root URL to User/userLandingpage.php
+RewriteRule ^$ User/userLandingpage.php [L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Cache control (optional)
+<IfModule mod_headers.c>
+    Header set Cache-Control "max-age=2592000, public"
+</IfModule>
+
+# Error pages (optional)
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+Options All -Indexes
