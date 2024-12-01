@@ -32,7 +32,7 @@ if (!isset($_SESSION['username'])) {
             <div id="sched" class="d-flex flex-column">
                 <div id="forPicAndSched" class="d-flex">
                     <div id="pic">
-                        
+                         <img src="../Images/baptismLogo.jpg" class="img-fluid rounded shadow" alt="Baptism Image" style="max-height: 200px; width: 100%; object-fit: cover; border: double black;">
                     </div>
                     <div id="schedList">
                         <p id="monthLabel" class="forLabel">Month of <?php echo date('F Y'); ?></p>
