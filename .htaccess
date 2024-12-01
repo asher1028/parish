@@ -4,10 +4,10 @@ RewriteEngine On
 Allow from All
 
 # Set the default landing page to userLandingpage.php
- DirectoryIndex userLandingpage.php index.php index.html
+ #DirectoryIndex userLandingpage.php index.php index.html
 
 # Redirect root URL to User/userLandingpage.php
- RewriteRule ^$ User/userLandingpage.php [L]
+ #RewriteRule ^$ User/userLandingpage.php [L]
 
 # Prevent directory listing
 # Options -Indexes
@@ -21,4 +21,4 @@ Allow from All
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 
-Options All -Indexes
+#Options All -Indexes
