@@ -15,7 +15,8 @@ if (isset($_SESSION['username'])) {
 
     // Check if the user has a profile picture
     if ($profile_picture) {
-        $profilePicPath = "../uploads/" . $profile_picture; // Assuming pictures are stored in 'uploads' folder
+        #$profilePicPath = "../uploads/" . $profile_picture; // Assuming pictures are stored in 'uploads' folder
+		$profilePicPath = $profile_picture; // Assuming pictures are stored in 'uploads' folder
     } else {
         $profilePicPath = "../Images/profileIcon.png"; // Default image
     }
