@@ -70,19 +70,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
 
-        window.onload = function() {
-        var today = new Date().toISOString().split('T')[0];
-        document.getElementById('datePick').setAttribute('min', today);
+        // Restrict past dates and times
+        window.onload = function () {
+            // Set today's date as the minimum for the date picker
+            var today = new Date().toISOString().split('T')[0];
+            var datePicker = document.getElementById('datePick');
+            datePicker.setAttribute('min', today);
+
+            // Validate the input to prevent typing past dates
+            datePicker.addEventListener('input', function () {
+                var selectedDate = this.value;
+                if (selectedDate < today) {
+                    alert('You cannot select a past date.');
+                    this.value = ''; // Clear the invalid input
+                }
+            });
         };
 
-        document.getElementById('datePick').addEventListener('change', function() {
+        // Handle changes in the date picker
+        document.getElementById('datePick').addEventListener('change', function () {
             var selectedDate = this.value;
             var today = new Date().toISOString().split('T')[0];
 
-            // If the selected date is today, set the minimum selectable time to the current time
             if (selectedDate === today) {
-                var currentTime = new Date().toISOString().split('T')[1].slice(0, 5);
-                document.getElementById('timePick').min = currentTime;
+                // If the selected date is today, restrict the time picker
+                var currentTime = new Date();
+                var hours = currentTime.getHours();
+                var minutes = currentTime.getMinutes();
+
+                // Format time to HH:MM (24-hour format)
+                var formattedTime = (hours < 10 ? '0' : '') + hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+
+                // Set the minimum time to the current time
+                document.getElementById('timePick').setAttribute('min', formattedTime);
             } else {
                 // Remove the time restriction for future dates
                 document.getElementById('timePick').removeAttribute('min');
