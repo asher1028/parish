@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Check if the user is already logged in
 if (isset($_SESSION['username'])) {
-    header("Location: userHomepage.php"); // Redirect to the homepage if already logged in
+    header("Location: userLandingpage.php"); // Redirect to the homepage if already logged in
     exit();
 }
 ?>
