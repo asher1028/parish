@@ -2,18 +2,18 @@
 RewriteEngine On
 
 require all granted
-Order allow,deny
+Order allow, deny
 Allow from all
 
 # Redirect root URL to User/userLandingpage.php
 # RewriteRule ^$ User/userLandingpage.php [L]
 
 # Set the default landing page to userLandingpage.php
-DirectoryIndex userLandingpage.php index.php index.html
+# DirectoryIndex userLandingpage.php index.php index.html
 
 
 # Prevent directory listing
-Options -Indexes
+# Options -Indexes
 
 # Cache control (optional)
 <IfModule mod_headers.c>
@@ -21,7 +21,7 @@ Options -Indexes
 </IfModule>
 
 # Error pages (optional)
-ErrorDocument 404 /404.html
-ErrorDocument 403 /403.html
+# ErrorDocument 404 /404.html
+# ErrorDocument 403 /403.html
 
-Options All -Indexes
+# Options All -Indexes
