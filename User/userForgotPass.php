@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Email settings
             $mail->setFrom('sanjuan.parish1@gmail.com', 'Parish of San Juan');
-            $mail->addAddress($email);
+            $mail->addAddress($emailOrNum);
             $mail->Subject = 'Your OTP for Password Recovery';
             $mail->Body = "Your OTP is: $otp. It will expire in 10 minutes.";
 

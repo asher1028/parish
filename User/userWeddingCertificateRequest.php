@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
         <script>
             function btncancel(event) {
                 event.preventDefault();
-                window.location.href = "userCertificateRequest.php";
+                window.location.href = "userLandingpage.php";
             }
             function btnaccept(event) {
                 event.preventDefault();

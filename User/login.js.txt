@@ -1,9 +1,0 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const signUpButton = document.getElementById("btnSignUp");
-
-    if (signUpButton) {
-        signUpButton.addEventListener("click", () => {
-            window.location.href = 'createUserAccount.php';
-        });
-    }
-});

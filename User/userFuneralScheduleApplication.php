@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script>
         function btnback(event) {
             event.preventDefault();
-            window.location.href = "userMass.php";
+            window.location.href = "userLandingpage.php";
         }
 
         function validateForm() {

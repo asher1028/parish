@@ -1,6 +1,7 @@
 <?php
 include 'userSessionStart.php';
 
+$isUserLoggedIn = isset($_SESSION['username']) ? 'true' : 'false';
 ?>
 <!DOCTYPE html>
 <html>

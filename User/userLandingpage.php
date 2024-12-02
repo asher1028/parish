@@ -1,6 +1,4 @@
-<?php include 'userSessionStart.php'; 
-
-?>
+<?php include 'userSessionStart.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +7,24 @@
     <title>Parish of San Juan</title>
     <link rel="stylesheet" href="userHomepage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-   <script src="js/bootstrap.min.js"></script>
-
-
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"></script>
-
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v21.0"></script>
-    
+       <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS (including Popper.js for modals) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Adding jQuery and Bootstrap JS for carousel functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
     <script>
         function readmore() { window.location.href = 'userAbout.php'; }
         function btnservices() { window.location.href = 'userService.php'; }
-        function massSchedule() { window.location.href = 'massSchedule.php'; }
+        function massSchedule() { window.location.href = 'userPrivateMass.php'; }
         function contactUs() { window.location.href = 'userContactUs.php'; }
         function sacraments() { window.location.href = 'newUserSacraments.php'; }
         function igopen(event) {
@@ -48,7 +50,7 @@
             object-fit: cover;
         }
 
-        /* Custom styling for sections xxx*/
+        /* Custom styling for sections */
         .welcome-section, .mass-schedule-section, .sacraments-section, .video-section, .services-offered-section, .contact-section, .social-section {
         padding: 25px;
         border-radius: 8px;
@@ -101,13 +103,22 @@
                 <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../Images/home.png" class="d-block w-100" alt="Church Image 1">
+                            <img src="../Images/3.jpg" class="d-block w-100" alt="Church Image 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="../Images/image2.jpg" class="d-block w-100" alt="Church Image 2">
+                            <img src="../Images/5.jpg" class="d-block w-100" alt="Church Image 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="../Images/angTinig.png" class="d-block w-100" alt="Church Image 3">
+                            <img src="../Images/4.png" class="d-block w-100" alt="Church Image 3">
+                        </div>
+						<div class="carousel-item active">
+                            <img src="../Images/6.jpg" class="d-block w-100" alt="Church Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/2.jpg" class="d-block w-100" alt="Church Image 5">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../Images/1.jpg" class="d-block w-100" alt="Church Image 6">
                         </div>
                     </div>
 
@@ -273,33 +284,33 @@
             <!-- Each image thumbnail wrapped in a link that triggers the modal -->
             <div class="row justify-content-center">
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image1.jpg">
-                        <img src="../Images/image1.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 1">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/1.jpg">
+                        <img src="../Images/1.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 1">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image2.jpg">
-                        <img src="../Images/image2.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 2">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/2.jpg">
+                        <img src="../Images/2.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 2">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image3.jpg">
-                        <img src="../Images/image3.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 3">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/3.jpg">
+                        <img src="../Images/3.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 3">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image4.jpg">
-                        <img src="../Images/image4.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 4">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/4.png">
+                        <img src="../Images/4.png" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 4">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image5.jpg">
-                        <img src="../Images/image5.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 5">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image20.jpg">
+                        <img src="../Images/image20.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 5">
                     </a>
                 </div>
                 <div class="col-4 col-md-2 mb-1">
-                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image6.jpg">
-                        <img src="../Images/image6.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 6">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-img-src="../Images/image19.jpg">
+                        <img src="../Images/image19.jpg" class="img-fluid rounded shadow gallery-image" alt="Gallery Image 6">
                     </a>
                 </div>
             </div>
