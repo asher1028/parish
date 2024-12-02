@@ -1,24 +1,35 @@
-# Enable rewrite engine
+# Enable the rewrite engine (mod_rewrite)
 RewriteEngine On
 
-Allow from All
+# Allow access to all files in the directory
+<Files "*">
+    Order allow,deny
+    Allow from all
+</Files>
 
 # Set the default landing page to userLandingpage.php
- #DirectoryIndex userLandingpage.php index.php index.html
+DirectoryIndex userLandingpage.php index.php index.html
 
-# Redirect root URL to User/userLandingpage.php
- #RewriteRule ^$ User/userLandingpage.php [L]
+# Redirect root URL to User/userLandingpage.php (uncomment if needed)
+RewriteRule ^$ User/userLandingpage.php [L]
 
-# Prevent directory listing
-# Options -Indexes
+# Prevent directory listing (if no index file is present)
+Options -Indexes
 
 # Cache control (optional)
 <IfModule mod_headers.c>
     Header set Cache-Control "max-age=2592000, public"
 </IfModule>
 
-# Error pages (optional)s
+# Custom error pages (optional)
 ErrorDocument 404 /404.html
 ErrorDocument 403 /403.html
 
-#Options All -Indexes
+# Optional: Additional mod_rewrite rules for custom redirect handling
+# Example: Force HTTPS (uncomment if necessary)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: Set custom redirects or conditions (uncomment if needed)
+# RewriteCond %{REQUEST_URI} ^/old-page$
+# RewriteRule ^old-page$ /new-page [R=301,L]
